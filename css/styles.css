@@ -114,6 +114,22 @@ body {
     padding: 24px 0;
 }
 
+.current {
+    color: var(--hover-color);
+    position: relative;
+}
+.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-color);
+    border-radius: 2px;
+}
+
+
 .header-address {
     font-style: normal;
     margin-left: auto;
@@ -146,6 +162,7 @@ rgba(46, 47, 66, 0.7)), url(../images/hero_bckr.jpg);
     max-width: 1440px;    
     margin: 0 auto;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
@@ -193,6 +210,16 @@ rgba(46, 47, 66, 0.7)), url(../images/hero_bckr.jpg);
     gap: 24px;
 }
 
+.feature-block {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--secondary-white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
 .feature-subtitle {
     color: var(--primary-black-color);
     font-size: 20px;
@@ -287,8 +314,28 @@ rgba(46, 47, 66, 0.7)), url(../images/hero_bckr.jpg);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
+.team-list-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.team-socials-item {
+    display: flex;
+    width: calc((100% - 3 * 24px) / 4);
+}
+
+.team-socials-link {
+     width: 100%;
+     height: 100%;
+     background-color: var(--logo-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+}
 /**------------ FOOTER-------------- */
 
 .footer {
