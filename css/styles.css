@@ -73,6 +73,7 @@ body {
 .header {
   padding: 24px 0;
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .header-navigation {
   display: flex;
@@ -134,6 +135,7 @@ body {
   height: 4px;
   background-color: var(--hover-color);
   border-radius: 2px;
+  bottom: -1px;
 }
 
 .header-address {
@@ -175,6 +177,7 @@ body {
   margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -307,13 +310,14 @@ body {
   background-color: var(--basic-white-color);
   width: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 
 .team-item-card {
-  padding: 32px 16px;
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  padding: 32px 0px;
 }
 
 .team-subtitle {
@@ -337,6 +341,7 @@ body {
 
 .team-list-socials {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -426,6 +431,7 @@ body {
 
 .footer-cotainer {
   display: flex;
+  align-items: baseline
 }
 
 .footer-left {
@@ -522,7 +528,7 @@ body {
   padding: 12px 24px;
   border-radius: 4px;
   border: 1px solid var(--border-color);
-  transition-property: color, background-color, border;
+  transition-property: color, background-color, border-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -532,6 +538,7 @@ body {
   color: var(--basic-white-color);
   background-color: var(--hover-color);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /**------------ PROJECT-------------- */
@@ -550,6 +557,10 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.project-link {
+  display: block;
+}
+
 .project-cover-box {
   position: relative;
   overflow: hidden;
@@ -563,7 +574,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  padding: 40px 32px 164px;
+  padding: 40px 32px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -597,8 +608,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-item:hover,
-.project-item:focus {
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -612,8 +623,7 @@ body {
   top: 0;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .modal {
@@ -645,20 +655,24 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
+  padding: 0;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--border-color);
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--primary-black-color);
-  transition-property: background-color;
+  transition-property: background-color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-icon {
   fill: currentColor;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
