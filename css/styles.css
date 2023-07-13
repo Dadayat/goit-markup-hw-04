@@ -552,13 +552,13 @@ body {
 
 .project-item {
   width: calc((100% - 48px) / 3);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-cover-box {
@@ -682,4 +682,5 @@ body {
 .modal-close-btn:is(:hover, :focus) {
   background-color: var(--hover-color);
   color: var(--basic-white-color);
+  border: none;
 }
